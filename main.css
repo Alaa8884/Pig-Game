@@ -27,12 +27,17 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex: 50%;
+  flex-basis: 50%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
 }
 .player.active {
   background-color: #f5a1bd;
@@ -77,7 +82,12 @@ body {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
-
+@media (max-width: 768px) {
+  .current {
+    width: 60%;
+    padding: 10px;
+  }
+}
 .current .active {
   opacity: 1;
 }
@@ -113,6 +123,7 @@ body {
   box-shadow: 1px 1px 3px rgba(250, 126, 213, 0.3);
   cursor: pointer;
 }
+
 .btn.new-game {
   top: 5%;
 }
@@ -121,6 +132,17 @@ body {
 }
 .btn.hold {
   bottom: 18%;
+}
+@media (max-width: 768px) {
+  .btn.new-game {
+    top: 2%;
+  }
+  .btn.roll {
+    bottom: 35%;
+  }
+  .btn.hold {
+    bottom: 10%;
+  }
 }
 img {
   width: 90px;

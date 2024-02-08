@@ -29,8 +29,8 @@ const init = function () {
   currentTwo.textContent = 0;
 
   diceImg.classList.add('hidden');
-  playerOne.classList.remove('player--winner');
-  playerTwo.classList.remove('player--winner');
+  playerOne.classList.remove('player-win');
+  playerTwo.classList.remove('player-win');
   playerOne.classList.add('active');
   playerTwo.classList.remove('active');
 };
@@ -65,7 +65,7 @@ holdBtn.addEventListener('click', function () {
       scores[activePlayer];
     if (scores[activePlayer] >= 30) {
       playing = false;
-      diceImg.classList.add('hidden')
+      diceImg.classList.add('hidden');
       document.querySelector(`.p-${activePlayer}`).classList.add('player-win');
       document.querySelector(`.p-${activePlayer}`).classList.remove('active');
     } else {
